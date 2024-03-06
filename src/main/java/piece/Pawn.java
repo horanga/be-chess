@@ -6,8 +6,8 @@ public class Pawn extends Piece {
 
     public Pawn(Pieces pieces) {
 
-        this.color = pieces.color;
-        this.logo = pieces.presentation;
+        this.color = pieces.getColor();
+        this.logo = pieces.getPresentation();
     }
 
     @Override

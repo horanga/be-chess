@@ -8,11 +8,19 @@ public enum Pieces {
     NONE("NONE", ".");
 
 
-    final String color;
-    final String presentation;
+    final private String color;
+    final private String presentation;
 
     Pieces(String color, String presentation) {
         this.color = color;
         this.presentation = presentation;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getPresentation() {
+        return presentation;
     }
 }
