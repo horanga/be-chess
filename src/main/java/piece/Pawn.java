@@ -1,26 +1,12 @@
 package piece;
 
-import java.util.Objects;
-
 public class Pawn extends Piece {
+    public Pawn(String color, Pieces pieces) {
+        if (!isValidColor(color)) {
+            throw new IllegalArgumentException("폰의 색은 하얀색과 검은색만 가능합니다.");
+        }
 
-    public Pawn(Pieces pieces) {
-
-        this.color = pieces.getColor();
+        this.color = color;
         this.logo = pieces.getPresentation();
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Pawn pawn = (Pawn) o;
-        return Objects.equals(color, pawn.color);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(color);
-    }
-
 }

@@ -1,5 +1,7 @@
 package piece;
 
+import chess.Board;
+
 public class Piece {
 
     protected String color;
@@ -11,5 +13,10 @@ public class Piece {
 
     public String getColor() {
         return color;
+    }
+
+    public boolean isValidColor(String color) {
+
+        return color.equals(Board.BLACK) || color.equals(Board.WHITE);
     }
 }
