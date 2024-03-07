@@ -14,12 +14,8 @@ public class Main {
 
                 if (secondCommand.equals("end")) {
                     break;
-
                 }
-
             }
         }
-
-
     }
 }
