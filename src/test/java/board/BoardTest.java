@@ -17,16 +17,16 @@ public class BoardTest {
 
         List<List<Piece>> chessBoard = Board.getBOARD();
 
-        assertThat(chessBoard.size()).isEqualTo(8);
-        assertThat(chessBoard.get(0).size()).isEqualTo(8);
+        assertThat(chessBoard.size()).isEqualTo(Board.COUNT_OF_PIECES);
+        assertThat(chessBoard.get(0).size()).isEqualTo(Board.COUNT_OF_PIECES);
     }
 
     @DisplayName("보드에 pawn를 넣는다.")
     @Test
     void test2() {
         List<List<Piece>> chessBoard = Board.getBOARD();
-        List<Piece> pawnPieces = chessBoard.get(1);
-        List<Piece> pawnPieces2 = chessBoard.get(6);
+        List<Piece> pawnPieces = chessBoard.get(Board.ROW_OF_BLACKPAWN);
+        List<Piece> pawnPieces2 = chessBoard.get(Board.ROW_OF_WHITEPAWN);
 
         for (int i = 0; i < pawnPieces.size(); i++) {
             assertThat(pawnPieces.get(i).getColor()).isEqualTo("black");
@@ -35,5 +35,4 @@ public class BoardTest {
             assertThat(pawnPieces2.get(i).getLogo()).isEqualTo("p");
         }
     }
-
 }
