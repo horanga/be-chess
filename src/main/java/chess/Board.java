@@ -44,19 +44,17 @@ public class Board {
         board.add(row);
     }
 
+
     public static List<List<Piece>> getBOARD() {
         return BOARD;
     }
 
     public void printLogo() {
         BOARD.forEach(i -> {
+
             i.forEach(j -> System.out.print(j.getLogo()));
             System.out.println();
         });
     }
 
-    public static void main(String[] args) {
-        Board board = new Board();
-        board.printLogo();
-    }
 }
